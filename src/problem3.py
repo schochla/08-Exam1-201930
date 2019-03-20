@@ -4,7 +4,7 @@ Exam 1, problem 3.
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
          and Leo Schoch-Spana.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -170,6 +170,12 @@ def run_test_problem3a():
 
 
 def problem3a(a, b):
+    total = 0
+    for k in range(a, a**b):
+        if is_prime(k):
+            total = total + k
+    return total
+
     """
     What comes in:  Positive integers a and b, with a >= 2.
     What goes out:

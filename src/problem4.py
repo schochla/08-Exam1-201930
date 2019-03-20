@@ -53,6 +53,12 @@ def run_test_problem4():
 
 
 def problem4(point1, point2, n, window):
+    pointe1 = (30,20)
+    pointe1.fill_color = point1.fill_color
+    pointe2 = point2
+    pointe2.fill_color = point2.fill_color
+    pointe1.attach_to(window)
+    pointe2.attach_to(window)
     """
     See   problem4_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
