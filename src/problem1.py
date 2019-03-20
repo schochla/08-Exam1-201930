@@ -88,11 +88,11 @@ def problem1(circle, rectangle, color, length, window):
     circLine.color = color
     circLine.thickness = circle.outline_thickness
     circLine.attach_to(window)
-    vertLine = rg.Line(circLine.get_midpoint(), length / 2)
-    vertLine.get_midpoint(circLine.get_midpoint())
-    vertLine.color = rg.Circle.fill_color
-    vertLine.thickness = circle.outline_thickness + rectangle.outline_thickness
-    vertLine.attach_to(window)
+    #vertLine = rg.Line()
+    #vertLine.get_midpoint(circLine.get_midpoint())
+    #vertLine.color = rg.Circle.fill_color
+    #vertLine.thickness = (circle.outline_thickness + rectangle.outline_thickness)
+    #vertLine.attach_to(window)
 
     window.render()
 

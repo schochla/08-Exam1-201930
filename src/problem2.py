@@ -40,18 +40,66 @@ def test_factor_sum():
     print('---------------------------------------------------------')
     print('Testing the   factor_sum   function:')
     print('---------------------------------------------------------')
-    # Test 1
-    expected = 1.8333333
-    actual = factor_sum(3)  # Test 1 of broken_6
-    print("Testing BROKEN_6:\n")
-    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
-    print('  Actual for BROKEN_6, Test 1:', actual)
     ###########################################################################
     # WRITE YOUR TESTS BELOW HERE:
     ###########################################################################
+    # Test 1
+    expected = 11
+    actual = factor_sum(28)  # Test 1 of broken_6
+    print("Testing BROKEN_6:\n")
+    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
+    print('  Actual for BROKEN_6, Test 1:', actual)
+    # Test 2
+    expected = 9
+    actual = factor_sum(10)  # Test 1 of broken_6
+    print("Testing BROKEN_6:\n")
+    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
+    print('  Actual for BROKEN_6, Test 1:', actual)
+    # Test 3
+    expected = 4
+    actual = factor_sum(9)  # Test 1 of broken_6
+    print("Testing BROKEN_6:\n")
+    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
+    print('  Actual for BROKEN_6, Test 1:', actual)
+    # Test 4
+    expected = 5
+    actual = factor_sum(31)  # Test 1 of broken_6
+    print("Testing BROKEN_6:\n")
+    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
+    print('  Actual for BROKEN_6, Test 1:', actual)
+    # Test 5
+    expected = 7
+    actual = factor_sum(4)  # Test 1 of broken_6
+    print("Testing BROKEN_6:\n")
+    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
+    print('  Actual for BROKEN_6, Test 1:', actual)
+
+
+def sum_of_digits(number):
+    if number < 0:
+        number = -number
+
+    digit_sum = 0
+    while True:
+        if number == 0:
+            break
+        digit_sum = digit_sum + (number % 10)
+        number = number // 10
+
+    return digit_sum
 
 
 def factor_sum(n):
+    total = 0
+    for k in range (n + 1):
+        if k % n == 0:
+            total = total + k
+
+    return sum_of_digits(total)
+
+
+
+
     """
     Given a positive integer n,
     returns the sum of the digits of the sum of the distinct factors of n,
