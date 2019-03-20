@@ -196,7 +196,7 @@ def problem3a(a, b):
       -- problem3a(8, 2) = 11 + 23 + 29 + 41 + 43 + 47 + 61  (which is 255)
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -283,7 +283,7 @@ def problem3b(m, x):
            which is approximately 12.020144157845959.
      """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # SAID TO IGNORE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
     ###########################################################################
