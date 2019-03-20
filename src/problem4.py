@@ -53,12 +53,15 @@ def run_test_problem4():
 
 
 def problem4(point1, point2, n, window):
-    pointe1 = (30,20)
-    pointe1.fill_color = point1.fill_color
-    pointe2 = point2
-    pointe2.fill_color = point2.fill_color
-    pointe1.attach_to(window)
-    pointe2.attach_to(window)
+    point1.attach_to(window)
+    point2.attach_to(window)
+    line = rg.Line(point1, point2)
+    #Placeholder to have a dot path
+    line.color = 'Green'
+    line.attach_to(window)
+    for k in range((2*n) + 1):
+        rg.Point.attach_to(line)
+    window.render()
     """
     See   problem4_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
