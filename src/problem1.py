@@ -3,13 +3,13 @@ Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Leo Schoch-Spana.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
 # -----------------------------------------------------------------------------
-# TODO: 2. Right-click on the  src  folder and
+# DONE: 2. Right-click on the  src  folder and
 #              Mark Directory as ... Sources Root,
 #          if you have not already done so.
 # -----------------------------------------------------------------------------
@@ -81,6 +81,22 @@ def run_test_problem1():
 
 
 def problem1(circle, rectangle, color, length, window):
+    circle.attach_to(window)
+    rectangle.attach_to(window)
+    rg.Color = color
+    circLine = rg.Line(circle.center, rectangle.get_center())
+    circLine.color = color
+    circLine.thickness = circle.outline_thickness
+    circLine.attach_to(window)
+    vertLine = rg.Line(circLine.get_midpoint(), length / 2)
+    vertLine.get_midpoint(circLine.get_midpoint())
+    vertLine.color = rg.Circle.fill_color
+    vertLine.thickness = circle.outline_thickness + rectangle.outline_thickness
+    vertLine.attach_to(window)
+
+    window.render()
+
+
     """
     See   problem1_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
@@ -117,6 +133,7 @@ def problem1(circle, rectangle, color, length, window):
       :type color:     str
       :type window:    rg.RoseWindow
     """
+
     # -------------------------------------------------------------------------
     # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
