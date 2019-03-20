@@ -46,34 +46,34 @@ def test_factor_sum():
 
     # Test 1
     expected = 11
-    actual = factor_sum(28)  # Test 1 of broken_6
-    print("Testing BROKEN_6:\n")
-    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
-    print('  Actual for BROKEN_6, Test 1:', actual)
+    actual = factor_sum(28)  # Test 1 of problem2
+    print("Testing problem2:\n")
+    print('Expected for problem2, Test 1:', expected, '(approximately)')
+    print('  Actual for problem2, Test 1:', actual)
     # Test 2
     expected = 9
-    actual = factor_sum(10)  # Test 1 of broken_6
-    print("Testing BROKEN_6:\n")
-    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
-    print('  Actual for BROKEN_6, Test 1:', actual)
+    actual = factor_sum(10)  # Test 2 of problem2
+    print("Testing problem2:\n")
+    print('Expected for problem2, Test 2:', expected, '(approximately)')
+    print('  Actual for problem2, Test 2:', actual)
     # Test 3
     expected = 4
-    actual = factor_sum(9)  # Test 1 of broken_6
-    print("Testing BROKEN_6:\n")
-    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
-    print('  Actual for BROKEN_6, Test 1:', actual)
+    actual = factor_sum(9)  # Test 3 of problem2
+    print("Testing problem2:\n")
+    print('Expected for problem2, Test 3:', expected, '(approximately)')
+    print('  Actual for problem2, Test 3:', actual)
     # Test 4
     expected = 5
-    actual = factor_sum(31)  # Test 1 of broken_6
-    print("Testing BROKEN_6:\n")
-    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
-    print('  Actual for BROKEN_6, Test 1:', actual)
+    actual = factor_sum(31)  # Test 4 of problem2
+    print("Testing problem2:\n")
+    print('Expected for problem2, Test 4:', expected, '(approximately)')
+    print('  Actual for problem2, Test 4:', actual)
     # Test 5
     expected = 7
-    actual = factor_sum(4)  # Test 1 of broken_6
-    print("Testing BROKEN_6:\n")
-    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
-    print('  Actual for BROKEN_6, Test 1:', actual)
+    actual = factor_sum(4)  # Test 5 of problem2
+    print("Testing problem2:\n")
+    print('Expected for problem2, Test 5:', expected, '(approximately)')
+    print('  Actual for problem2, Test 5:', actual)
 
 
 def sum_of_digits(number):
@@ -92,8 +92,8 @@ def sum_of_digits(number):
 
 def factor_sum(n):
     total = 0
-    for k in range (n + 1):
-        if k % n == 0:
+    for k in range (1, n + 1):
+        if n % k == 0:
             total = total + k
 
     return sum_of_digits(total)
@@ -132,3 +132,5 @@ def factor_sum(n):
     ###########################################################################
     # DO NOT modify the above line of code!
     ###########################################################################
+
+main()
